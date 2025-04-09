@@ -18,26 +18,12 @@
       const input = document.getElementById('pokemonInput').value.toLowerCase().trim();
       const url = `https://pokeapi.co/api/v2/pokemon/${input}`;  // PokeAPI URL
 
-      // Clear previous results or error messages
-      const pokemonDetails = document.getElementById('pokemonDetails');
-      pokemonDetails.innerHTML = '';
-
-      // Check if the input field is empty
-      if (!input) {
-        pokemonDetails.innerHTML = '<p class="error">Please enter a Pokémon name or ID.</p>';
-        return;
-      }
-
       try {
-        // Make the fetch request to the PokeAPI
         const response = await fetch(url);
 
-        // Check if the response is not ok (e.g., Pokémon not found)
         if (!response.ok) {
           throw new Error('Pokémon not found!');
         }
-
-        // Parse the response data
         const data = await response.json();
 
         // Get the front-facing image URL
@@ -53,7 +39,6 @@
           <p>Type: ${types}</p>
         `;
       } catch (error) {
-        // If an error occurs (e.g., Pokémon not found), show an error message
         pokemonDetails.innerHTML = `<p class="error">${error.message}</p>`;
       }
     }
