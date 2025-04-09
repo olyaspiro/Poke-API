@@ -13,4 +13,4 @@ To dynamically update the DOM  based on the data received from the PokeAPI I:
 - extracted the types using data.types.map();
 - capitalized the name using data.name.charAt(0).toUpperCase() + data.name.slice(1).
 
-  I used vanilla JavaScript, and tried to kepp my code simple and readable.
+  I used vanilla JavaScript, and tried to keep my code simple and readable.
