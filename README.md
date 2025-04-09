@@ -7,8 +7,8 @@ If the Pokémon name or ID is invalid, an error message like "Pokémon not found
 If the input field is empty, a message prompting the user to enter a name or ID appears.
 When the search is successful, the Pokémon's name, image, and types are displayed in a clean, readable format.
 
-To dynamically update the DOM  based on the data received from the PokeAPI:
-- I updated innerHTML of the pokemonDetails div with the fetched Pokémon's name, image, and types;
+To dynamically update the DOM  based on the data received from the PokeAPI I:
+- updated innerHTML of the pokemonDetails div with the fetched Pokémon's name, image, and types;
 - displayed the image of the Pokémon using data.sprites.front_default;
 - extracted the types using data.types.map();
 - capitalized the name using data.name.charAt(0).toUpperCase() + data.name.slice(1).
